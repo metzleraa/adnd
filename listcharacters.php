@@ -7,13 +7,23 @@
     $PDOdb = new TPDOdb;
     
     $l=new TListviewTBS('lcharacters');
-	$sql = "SELECT pokemon_name,speed FROM pokemon ";
+	$sql = "SELECT nom,genre,race,classe,taille,poid,forc,intelligence,sagesse,dexterite,constitution, charisme FROM personnage ";
     
     echo $l->render($PDOdb, $sql,array(
 	
 		'title'=>array(
-			'pokemon_name'=>$langs->trans('Pokemon')
-			,'speed'=>$langs->trans('Speed')
+			'nom'=>$langs->trans('Nom')
+			,'genre'=>$langs->trans('Sexe')
+			,'race'=>$langs->trans('Race')
+			,'classe'=>$langs->trans('Classe')
+			,'taille'=>$langs->trans('Taille')
+			,'poid'=>$langs->trans('Poid')
+			,'forc'=>$langs->trans('Force')
+			,'intelligence'=>$langs->trans('Intelligence')
+			,'sagesse'=>$langs->trans('Sagesse')
+			,'dexterite'=>$langs->trans('Dexterite')
+			,'constitution'=>$langs->trans('Constitution')
+			,'charisme'=>$langs->trans('Charisme')
 		)
 		,'link'=>array()
 		,'hide'=>array('rowid')

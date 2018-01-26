@@ -5,7 +5,7 @@
     llxHeader();
     
     echo'
-    <form action="/action_page.php">
+    <form action="http://gigondas/~metzlera/Dolibarr/dolibarr/htdocs/custom/adnd/testpost.php" method="post">
     
     <table>
     <tr><td>Nom:</td><td><input type="text" name="nom" value=""></td></tr>
