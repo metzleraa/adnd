@@ -188,19 +188,19 @@ class modadnd extends DolibarrModules
 		// Add here entries to declare new menus
 		//
 		// Example to declare a new Top Menu entry and its Left menu entry:
-		// $this->menu[$r]=array(	'fk_menu'=>0,			                // Put 0 if this is a top menu
-		//							'type'=>'top',			                // This is a Top menu entry
-		//							'titre'=>'adnd top menu',
-		//							'mainmenu'=>'adnd',
-		//							'leftmenu'=>'adnd',
-		//							'url'=>'/adnd/pagetop.php',
-		//							'langs'=>'mylangfile@adnd',	        // Lang file to use (without .lang) by module. File must be in langs/code_CODE/ directory.
-		//							'position'=>100,
-		//							'enabled'=>'$conf->adnd->enabled',	// Define condition to show or hide menu entry. Use '$conf->adnd->enabled' if entry must be visible if module is enabled.
-		//							'perms'=>'1',			                // Use 'perms'=>'$user->rights->adnd->level1->level2' if you want your menu with a permission rules
-		//							'target'=>'',
-		//							'user'=>2);				                // 0=Menu for internal users, 1=external users, 2=both
-		// $r++;
+		 $this->menu[$r]=array(	'fk_menu'=>0,			                // Put 0 if this is a top menu
+									'type'=>'top',			                // This is a Top menu entry
+									'titre'=>'Personnages AD&D',
+									'mainmenu'=>'adnd',
+									'leftmenu'=>'adnd',
+									'url'=>'/adnd/listcharacters.php',
+									'langs'=>'mylangfile@adnd',	        // Lang file to use (without .lang) by module. File must be in langs/code_CODE/ directory.
+									'position'=>100,
+									'enabled'=>'$conf->adnd->enabled',	// Define condition to show or hide menu entry. Use '$conf->adnd->enabled' if entry must be visible if module is enabled.
+									'perms'=>'1',			                // Use 'perms'=>'$user->rights->adnd->level1->level2' if you want your menu with a permission rules
+									'target'=>'',
+									'user'=>2);				                // 0=Menu for internal users, 1=external users, 2=both
+		 $r++;
 		//
 		// Example to declare a Left Menu entry into an existing Top menu entry:
 		// $this->menu[$r]=array(	'fk_menu'=>'fk_mainmenu=xxx',		    // Use 'fk_mainmenu=xxx' or 'fk_mainmenu=xxx,fk_leftmenu=yyy' where xxx is mainmenucode and yyy is a leftmenucode
