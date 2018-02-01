@@ -1,5 +1,9 @@
 <?php
 
+    require 'config.php';
+    
+    llxHeader();
+
  $mysqli = new mysqli("gigondas","metzlera","metzlera","metzlera");
     
 $sql = "INSERT INTO personnage (nom, genre, race, classe, taille, poid, forc, intelligence, sagesse, dexterite, constitution, charisme) 
@@ -14,3 +18,9 @@ if ($mysqli->query($sql) === TRUE) {
 }
     
     $mysqli->close();
+    
+    echo '<form method="POST" action="listcharacters.php">
+    <input type="submit" name="Retour" value="retour" >
+    </form>';
+    
+        llxFooter();
